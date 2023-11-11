@@ -1,0 +1,155 @@
+{
+  "apiVersion": "1",
+  "name": "bpsl/hello",
+  "title": "Logo Slider",
+  "description": "Description of Logo Slider.",
+  "category": "widgets",
+  "keywords": ["hello", "block", "gutenberg"],
+  "textdomain": "logo-slider",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "cId": {
+      "type": "string",
+      "default": ""
+    },
+    "content": {
+      "type": "string",
+      "default": ""
+    },
+    "image": {
+      "type": "array",
+      "default":[]
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    },
+    "loop": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoplayDelay": {
+      "type": "number",
+      "default": 1
+    },
+    "speed": {
+      "type": "number",
+      "default": 1
+    },
+    "slideDirection": {
+      "type": "string",
+      "default": "rightToLeft"
+    },
+    "infinityLoop": {
+      "type": "boolean",
+      "default": true
+    },
+    "logoView": {
+      "type": "string",
+      "default": "desktop"
+    },
+    "logoSpace": {
+      "type": "string",
+      "default": "desktop"
+    },
+    "mobileDevice": {
+      "type": "number",
+      "default": 2
+    },
+    "tabletDevice": {
+      "type": "number",
+      "default": 3
+    },
+    "desktopDevice": {
+      "type": "number",
+      "default": 4
+    },
+    "mobileSpace": {
+      "type": "number",
+      "default": 15
+    },
+    "tabletSpace": {
+      "type": "number",
+      "default": 25
+    },
+    "desktopSpace": {
+      "type": "number",
+      "default": 30
+    },
+    "navigation": {
+      "type": "boolean",
+      "default": true
+    },
+    "pagination": {
+      "type": "boolean",
+      "default": true
+    },
+    "dynamicPagination": {
+      "type": "boolean",
+      "default": false
+    },
+    "captionHover": {
+      "type": "string",
+      "default": "visible"
+    },
+    "captionVisibility": {
+      "type": "boolean",
+      "default": false
+    },
+    "captionTextColor": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "captionBgColor": {
+      "type": "string",
+      "default": "#000"
+    },
+    "logoHoverStyle": {
+      "type": "string",
+      "default": "none"
+    },
+    "logoBorder": {
+      "type": "string",
+      "default": "0px"
+    },
+    "logoBorderColor": {
+      "type": "string",
+      "default": "#000"
+    },
+    "logoBorderRadius": {
+      "type": "number",
+      "default": 0
+    },
+    "borderStyle":{
+      "type":"string",
+      "default":"none"
+    },
+    "imageReplace":{
+      "type":"any"
+    },
+    "idx":{
+      "type":"number"
+    },
+    "orderIdx":{
+      "type":"number"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "columns": {
+        "desktop": 1,
+        "tablet": 1,
+        "mobile": 1
+      }
+    }
+  },
+  "editorScript": "file:./../dist/editor.js"
+}

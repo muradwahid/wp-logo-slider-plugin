@@ -1,0 +1,160 @@
+$primaryColor: #4527a4;
+
+// Common CSS
+html {
+  scroll-behavior: smooth;
+}
+
+// Dashicon
+.dashicons {
+  font-family: dashicons !important;
+}
+
+// Block Name
+.wp-block-bpsl-hello {
+  * {
+    box-sizing: border-box;
+  }
+  a{
+    text-decoration: none;
+  }
+  .prefixBlockName {
+    display: inline-block;
+  }
+
+  .icon {
+    font-style: inherit;
+  }
+  .swiper {
+    padding: 40px 30px;
+    .swiper-wrapper {
+      height: 100% !important;
+      .swiper-slide {
+        height: 100% !important;
+        margin-bottom: 20px;
+        justify-content: center;
+        .slider-logo-wrapper {
+          height: auto !important;
+          z-index: 10;
+          .logo-slider-delete-btn {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            color: #f81313;
+            transition: all 0.3s;
+            opacity: 0;
+          }
+          .logo-slider-delete-btn:hover{
+              color:#f05353;
+              cursor: pointer;
+            }
+            .logo-replace-wrapper {
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding:8px 8px;
+              border-right:1px solid gray;
+              border-bottom:1px solid gray;
+              background-color: #00000017;
+              backdrop-filter: blur(5px);
+              display: flex;
+              opacity: 0;
+              transition: all 0.3s;
+              z-index: 999;
+              cursor: pointer;
+              .fa-plus{
+                font-size: 12px;
+                color: #000;
+                transition: all 0.1s;
+              }
+              
+            }
+            .logo-replace-wrapper:hover{
+              .fa-plus{
+                transform: scale(1.8);
+              }
+            }
+          img {
+            height: auto !important;
+            width: 100%;
+            padding: 5px 7px;
+          }
+
+        }
+        .slider-logo-wrapper:hover {
+          .logo-replace-wrapper {
+            opacity: 1;
+          }
+          .logo-slider-delete-btn{
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 20px;
+      color: black !important;
+      font-weight: 900;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 43% !important;
+    }
+    .swiper-button-next {
+      right: -8px !important;
+    }
+    .swiper-button-prev {
+      left: -8px !important;
+    }
+  }
+
+  .logo-slider-caption {
+    width: 100%;
+    background-color: black;
+
+    p {
+      color: white;
+      text-align: center;
+      font-size: x-small;
+      padding: 0px 4px;
+    }
+  }
+  .caption-hover {
+    transition: all 0.3;
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+  .hidden {
+    display: none;
+  }
+  img {
+    transition: all 0.3s;
+  }
+  .slider-logo-wrapper {
+    overflow: hidden;
+    text-align: center;
+    span {
+      cursor: text;
+      font-size: 14px;
+    }
+  }
+  .slider-logo-wrapper:hover {
+    .logo-grayScale {
+      filter: grayscale(100%);
+    }
+    .zoomIn {
+      transform: scale(1.1);
+    }
+    .zoomOut {
+      transform: scale(0.9);
+    }
+  }
+
+  .slider-logo-wrapper:hover {
+    .caption-hover {
+      transition: all 0.5s;
+      transform: scaleX(1);
+    }
+  }
+}

@@ -1,0 +1,162 @@
+# Copyright (C) 2023 bPlugins LLC
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Logo Slider 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/logo slider\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-11-11T14:43:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: logo-slider\n"
+
+#. Plugin Name of the plugin
+msgid "Logo Slider"
+msgstr ""
+
+#. Description of the plugin
+msgid "Description of the Logo Slider."
+msgstr ""
+
+#. Author of the plugin
+msgid "bPlugins LLC"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://bplugins.com"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7163
+msgid "Slider Settings"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7167
+msgid "Enable Autoplay"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7172
+msgid "Slide Direction"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7183
+msgid "Slider Speed (Second)"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7191
+msgid "Slider Delay Speed (Second)"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7199
+msgid "Infinite Loop"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7269
+msgid "Navigation"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7272
+msgid "Show Navigation"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7283
+msgid "Pagination"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7286
+msgid "Show Pagination"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7299
+msgid "Dynamic Pagination"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7308
+msgid "Logo Caption"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7312
+msgid "Show Logo Caption"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7321
+msgid "Caption Visibility"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7331
+#: dist/editor.js:7344
+msgid "Color"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7358
+msgid "Logo Style"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7360
+msgid "Logo Hover Style"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7371
+msgid "Border Width"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7378
+msgid "Border Style"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7390
+msgid "Border Color"
+msgstr ""
+
+#: dist/editor.js:6
+#: dist/editor.js:7402
+msgid "Border Radius"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block title"
+msgid "Logo Slider"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block description"
+msgid "Description of Logo Slider."
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "hello"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "block"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "gutenberg"
+msgstr ""

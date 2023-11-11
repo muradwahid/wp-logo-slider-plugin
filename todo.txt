@@ -1,0 +1,9 @@
+Linking the logo
+
+\*
+* caption off by default
+* time in seconds
+* Auto slide on by default
+* Options to add new or remove one or more
+* Rearrange the logo like the gallery
+*\
