@@ -1,5 +1,5 @@
 import { Button } from '@wordpress/components';
-const Devices = ({ title, device, renderFunction }) => {
+const   Devices = ({ title, device, renderFunction }) => {
   return (
     <div style={{ display: 'flex', justifyContent:"space-between",alignItems:"center"}}>
       <div>{title}</div>
