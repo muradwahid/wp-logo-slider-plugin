@@ -20,5 +20,5 @@ export const bundle = () =>
       '!todo.txt',
       '!webpack.config.js',
     ])
-    .pipe(zip('logo-slider.zip'))
+    .pipe(zip('logo-slider-block.zip'))
     .pipe(gulp.dest('bundled'));

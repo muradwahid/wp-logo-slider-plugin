@@ -44,16 +44,16 @@ const Settings = ({ setAttributes, attributes }) => {
 
       <InspectorControls>
         <PanelBody
-          title={__('Slider Settings', 'logo-slider')}
+          title={__('Slider Settings', 'b-blocks')}
           initialOpen={true}
         >
           <ToggleControl
-            label={__('Enable Autoplay', 'logo-slider')}
+            label={__('Enable Autoplay', 'b-blocks')}
             checked={autoplay}
             onChange={() => setAttributes({ autoplay: !autoplay })}
           />
           <SelectControl
-            label={__('Slide Direction', 'logo-slider')}
+            label={__('Slide Direction', 'b-blocks')}
             value={slideDirection}
             options={[
               { value: 'rightToLeft', label: 'Right to Left' },
@@ -64,7 +64,7 @@ const Settings = ({ setAttributes, attributes }) => {
             }
           />
           <RangeControl
-            label={__('Slider Speed (Second)', 'logo-slider')}
+            label={__('Slider Speed (Second)', 'b-blocks')}
             value={speed}
             step={1}
             onChange={(speed) => setAttributes({ speed })}
@@ -72,7 +72,7 @@ const Settings = ({ setAttributes, attributes }) => {
             max={10}
           />
           <RangeControl
-            label={__('Slider Delay Speed (Second)', 'logo-slider')}
+            label={__('Slider Delay Speed (Second)', 'b-blocks')}
             value={autoplayDelay}
             step={1}
             onChange={(autoplayDelay) => setAttributes({ autoplayDelay })}
@@ -80,14 +80,14 @@ const Settings = ({ setAttributes, attributes }) => {
             max={10}
           />
           <ToggleControl
-            label={__('Infinite Loop', 'logo-slider')}
+            label={__('Infinite Loop', 'b-blocks')}
             checked={infinityLoop}
             onChange={() => setAttributes({ infinityLoop: !infinityLoop })}
           />
 
           <Devices
             device={logoView}
-            title={__('Logos Per View', 'logo-slide')}
+            title={__('Logos Per View', 'b-blocks')}
             renderFunction={(logoView) => setAttributes({ logoView })}
           />
           {logoView === 'desktop' && (
@@ -119,7 +119,7 @@ const Settings = ({ setAttributes, attributes }) => {
           )}
           <Devices
             device={logoSpace}
-            title={__('Space Between', 'logo-slide')}
+            title={__('Space Between', 'b-blocks')}
             renderFunction={(logoSpace) => setAttributes({ logoSpace })}
           />
           {logoSpace === 'desktop' && (
@@ -150,37 +150,37 @@ const Settings = ({ setAttributes, attributes }) => {
             />
           )}
         </PanelBody>
-        <PanelBody title={__('Navigation', 'logo-slider')} initialOpen={false}>
+        <PanelBody title={__('Navigation', 'b-blocks')} initialOpen={false}>
           <ToggleControl
             className="component-controll-margin"
-            label={__('Show Navigation', 'logo-slider')}
+            label={__('Show Navigation', 'b-blocks')}
             checked={navigation}
             onChange={() => setAttributes({ navigation: !navigation })}
           />
           <small style={{ marginTop: '0px' }}>
             {__(
               `Navigation is ${navigation ? 'visible' : 'invisible'}`,
-              'logo-slider'
+              'b-blocks'
             )}
           </small>
         </PanelBody>
-        <PanelBody title={__('Pagination', 'logo-slider')} initialOpen={false}>
+        <PanelBody title={__('Pagination', 'b-blocks')} initialOpen={false}>
           <ToggleControl
             className="component-controll-margin"
-            label={__('Show Pagination', 'logo-slider')}
+            label={__('Show Pagination', 'b-blocks')}
             checked={pagination}
             onChange={() => setAttributes({ pagination: !pagination })}
           />
           <small style={{ marginTop: '0px' }}>
             {__(
               `Pagination is ${pagination ? 'visible' : 'invisible'}`,
-              'logo-slider'
+              'b-blocks'
             )}
           </small>
           {pagination && (
             <ToggleControl
               className="component-controll-margin"
-              label={__('Dynamic Pagination', 'logo-slider')}
+              label={__('Dynamic Pagination', 'b-blocks')}
               checked={dynamicPagination}
               onChange={() =>
                 setAttributes({ dynamicPagination: !dynamicPagination })
@@ -189,11 +189,11 @@ const Settings = ({ setAttributes, attributes }) => {
           )}
         </PanelBody>
         <PanelBody
-          title={__('Logo Caption', 'logo-slider')}
+          title={__('Logo Caption', 'b-blocks')}
           initialOpen={false}
         >
           <ToggleControl
-            label={__('Show Logo Caption', 'logo-slider')}
+            label={__('Show Logo Caption', 'b-blocks')}
             checked={captionVisibility}
             onChange={() =>
               setAttributes({ captionVisibility: !captionVisibility })
@@ -202,17 +202,17 @@ const Settings = ({ setAttributes, attributes }) => {
           {captionVisibility && (
             <>
               <SelectControl
-                label={__('Caption Visibility', 'logo-slider')}
+                label={__('Caption Visibility', 'b-blocks')}
                 value={captionHover}
                 options={[
                   { value: 'visible', label: 'Always Visible' },
-                  { value: 'hover', label: 'Visible on Hober' },
+                  { value: 'hover', label: 'Visible on Hover' },
                 ]}
                 onChange={(value) => setAttributes({ captionHover: value })}
               />
               <p>Color</p>
               <ColorPalette
-                title={__('Color', 'logo-slider')}
+                title={__('Color', 'b-blocks')}
                 colors={[
                   { name: 'Black', color: '#000' },
                   { name: 'White', color: '#fff' },
@@ -225,7 +225,7 @@ const Settings = ({ setAttributes, attributes }) => {
               />
               <p>Background Color</p>
               <ColorPalette
-                title={__('Color', 'logo-slider')}
+                title={__('Color', 'b-blocks')}
                 colors={[
                   { name: 'Black', color: '#000' },
                   { name: 'White', color: '#fff' },
@@ -239,9 +239,9 @@ const Settings = ({ setAttributes, attributes }) => {
             </>
           )}
         </PanelBody>
-        <PanelBody title={__('Logo Style', 'logo-slider')} initialOpen={false}>
+        <PanelBody title={__('Logo Style', 'b-blocks')} initialOpen={false}>
           <SelectControl
-            label={__('Logo Hover Style', 'logo-slider')}
+            label={__('Logo Hover Style', 'b-blocks')}
             value={logoHoverStyle}
             options={[
               { value: 'none', label: 'None' },
@@ -252,14 +252,14 @@ const Settings = ({ setAttributes, attributes }) => {
             onChange={(value) => setAttributes({ logoHoverStyle: value })}
           />
           <UnitControl
-            label={__('Border Width', 'logo-slider')}
+            label={__('Border Width', 'b-blocks')}
             value={logoBorder}
             onChange={(value) => setAttributes({ logoBorder: value })}
             units={[]}
             min={0}
           />
           <SelectControl
-            label={__('Border Style', 'logo-slider')}
+            label={__('Border Style', 'b-blocks')}
             value={borderStyle}
             options={[
               { value: 'none', label: 'None' },
@@ -271,7 +271,7 @@ const Settings = ({ setAttributes, attributes }) => {
           />
           <p>Border Color</p>
           <ColorPalette
-            title={__('Border Color', 'logo-slider')}
+            title={__('Border Color', 'b-blocks')}
             value={logoBorderColor}
             colors={[
               { name: 'Black', color: '#000' },
@@ -283,7 +283,7 @@ const Settings = ({ setAttributes, attributes }) => {
             onChange={(value) => setAttributes({ logoBorderColor: value })}
           />
           <RangeControl
-            label={__('Border Radius', 'logo-slider')}
+            label={__('Border Radius', 'b-blocks')}
             value={logoBorderRadius}
             onChange={(value) => setAttributes({ logoBorderRadius: value })}
             min={0}

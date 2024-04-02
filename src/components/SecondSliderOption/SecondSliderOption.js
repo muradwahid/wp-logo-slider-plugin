@@ -107,7 +107,7 @@ return (
                         image: image.filter((val, i) => i !== idx),
                       })
                     }
-                    className="fa-solid fa-trash logo-slider-delete-btn"
+                    className="fa-solid fa-trash logo-slider-block-delete-btn"
                   ></i>
                   <div
                     onClick={() => setAttributes({ idx })}
@@ -130,7 +130,7 @@ return (
                     alt={img?.alt}
                   />
                   <div
-                    className={`logo-slider-caption  ${
+                    className={`logo-slider-block-caption  ${
                       captionHover === 'hover' && 'caption-hover'
                     } ${!captionVisibility && 'hidden'}`}
                     style={{

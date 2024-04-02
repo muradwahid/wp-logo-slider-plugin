@@ -1,11 +1,11 @@
 {
   "apiVersion": "1",
-  "name": "bpsl/hello",
+  "name": "b-blocks/logo-slider-block",
   "title": "Logo Slider",
-  "description": "Description of Logo Slider.",
+  "description": "Logo sliders are often used on websites and blogs to showcase a company's clients, partners, or sponsors.",
   "category": "widgets",
-  "keywords": ["hello", "block", "gutenberg"],
-  "textdomain": "logo-slider",
+  "keywords": ["slider", "logo", "carousel"],
+  "textdomain": "b-blocks",
   "attributes": {
     "align": {
       "type": "string",
@@ -21,7 +21,7 @@
     },
     "image": {
       "type": "array",
-      "default":[]
+      "default": []
     },
     "autoplay": {
       "type": "boolean",
@@ -123,18 +123,18 @@
       "type": "number",
       "default": 0
     },
-    "borderStyle":{
-      "type":"string",
-      "default":"none"
+    "borderStyle": {
+      "type": "string",
+      "default": "none"
     },
-    "imageReplace":{
-      "type":"any"
+    "imageReplace": {
+      "type": "any"
     },
-    "idx":{
-      "type":"number"
+    "idx": {
+      "type": "number"
     },
-    "orderIdx":{
-      "type":"number"
+    "orderIdx": {
+      "type": "number"
     }
   },
   "supports": {

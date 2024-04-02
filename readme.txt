@@ -10,22 +10,29 @@ License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Description of the Logo Slider
-
+Logo sliders are often used on websites and blogs to showcase a company's clients, partners, or sponsors.
 == Description ==
 
 Large Description
 
+This logo slider displays logos from a variety of companies. The logos are clickable, so that users can click on them to visit the corresponding website or social media page. Logo sliders are a great way to showcase your clients, partners, or sponsors, and to increase brand awareness for your company.
 
 **[Demos](https://bblockswp.com/demo/block-name)**
 
 
 = Features =
-- **Fully Customizable**: All the options you need to arrange the showcase to your liking are available here.
+- **Display multiple logos**: Logo sliders can display any number of logos.
+- **Customize the look and feel**: You can customize the look and feel of the logo slider to match your website or blog.
+
+- **Autoplay**: Logo sliders can be set to autoplay, which means that they will automatically rotate through the logos.
+
+- **Pause on hover**: Logo sliders can be set to pause when the user hovers over them.
+- **Clickable logos** : Logos in a logo slider can be made clickable, so that users can click on them to visit the corresponding website or social media page.
 
 
 = How to use =
-- First, install the Logo Slider plugin
-- Add the Logo Slider from the block category called "Widgets" in Gutenberg editor.
+- First, install the Logo Slider Block
+- Add the Logo Slider Block from the block category called "Widgets" in Gutenberg editor.
 - You can change block settings from the right-side settings sidebar.
 - Enjoy!
 
@@ -62,13 +69,13 @@ Large Description
 3. Click on the **Logo Slider** to add the block
 
 = Download & Upload: =
-1. Download the **Logo Slider** plugin (*.zip file*)
+1. Download the **Logo Slider** plugin (*logo-slider-block.zip file*)
 2. In your admin area, go to the Plugins menu and click on **Add New**
 3. Click on **Upload Plugin** and choose the **`plugin-slug.zip`** file and click on **Install Now**
 4. Activate the plugin and Enjoy!
 
 = Manually: =
-1. Download and upload the **Logo Slider** plugin to the **`/wp-content/plugins/`** directory
+1. Download and upload the **Logo Slider Block** plugin to the **`/wp-content/plugins/`** directory
 2. Activate the plugin through the Plugins menu in WordPress
 
 
@@ -92,7 +99,7 @@ You can use unlimited times as you want.
 
 = Where can I get support? =
 
-You can post your questions on the [support forum here](https://wordpress.org/support/plugin/block-directory/)
+You can post your questions on the [support forum here](https://wordpress.org/support/plugin/logo-slider-block/)
 
 
 == Screenshots ==

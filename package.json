@@ -1,7 +1,7 @@
 {
-  "name": "logo-slider",
+  "name": "logo-slider-block",
   "version": "1.0.0",
-  "description": "Discription of Logo Slider",
+  "description": "Logo sliders are often used on websites and blogs to showcase a company's clients, partners, or sponsors.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",

@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name:  Logo Slider
- * Description: Description of the Logo Slider.
+ * Plugin Name:  Logo Slider Block
+ * Description: Description of the Logo Slider Block.
  * Version: 1.0.0
  * Author: bPlugins LLC
  * Author URI: http://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain: logo-slider
+ * Text Domain: b-blocks
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) { exit; }

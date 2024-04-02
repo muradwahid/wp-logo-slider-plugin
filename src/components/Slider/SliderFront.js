@@ -105,7 +105,7 @@ const SliderFront = ({ attributes }) => {
                   />
                 </a>
                 <div
-                  className={`logo-slider-caption ${
+                  className={`logo-slider-block-caption ${
                     captionHover === 'hover' && 'caption-hover'
                   } ${!captionVisibility && 'hidden'}`}
                   style={{

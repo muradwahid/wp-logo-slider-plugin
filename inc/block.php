@@ -13,7 +13,7 @@ class BPSLHelloBlock{
 			'render_callback'	=> [$this, 'render']
 		] ); // Register Block
 
-		wp_set_script_translations( 'bpsl-hello-editor-script', 'textdomain', BPSL_DIR_PATH . 'languages' );
+		wp_set_script_translations( 'bpsl-hello-editor-script', 'b-blocks', BPSL_DIR_PATH . 'languages' );
 	}
 
 	function render( $attributes ){
@@ -21,7 +21,7 @@ class BPSLHelloBlock{
 
 		wp_enqueue_style( 'bpsl-hello-style' );
 		wp_enqueue_script( 'bpsl-hello-script', BPSL_DIR_URL . 'dist/script.js', [ 'react', 'react-dom' ], BPSL_VERSION, true );
-		wp_set_script_translations( 'bpsl-hello-script', 'textdomain', BPSL_DIR_PATH . 'languages' );
+		wp_set_script_translations( 'bpsl-hello-script', 'b-blocks', BPSL_DIR_PATH . 'languages' );
 
 		$className = $className ?? '';
 		$blockClassName = "wp-block-bpsl-hello $className align$align";
