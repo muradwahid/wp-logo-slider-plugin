@@ -19,113 +19,57 @@
       "type": "string",
       "default": ""
     },
+    "sliderItems":{
+
+    },
+    "options":{
+      "type":"object",
+      "default":{
+        "autoplay": true,
+        "direction": "rightToLeft",
+        "speed": 1,
+        "delay": 1,
+        "loop": true,
+        "logoView": { "desktop": 4, "tablet": 3, "mobile": 2 },
+        "space": { "desktop": 30, "tablet": 25, "mobile": 15 },
+        "navigation": true,
+        "pagination": true,
+        "dynamicPagination": false
+      }
+    },
+    "caption":{
+      "type":"object",
+      "default":{
+        "isCaptionVisible": false,
+        "hover": "visible",
+        "color":{"text":"#fff","bg":"#000"}
+      }
+    },
+    "sliderStyles":{
+      "type":"object",
+      "default":{
+        "logo":{
+          "hover":"none",
+          "border":{
+            "color":"#000",
+            "width":"0px",
+            "radius":0,
+            "style":"none"
+          }
+        }
+      }
+    },
     "image": {
       "type": "array",
       "default": []
-    },
-    "autoplay": {
-      "type": "boolean",
-      "default": true
     },
     "loop": {
       "type": "boolean",
       "default": false
     },
-    "autoplayDelay": {
-      "type": "number",
-      "default": 1
-    },
-    "speed": {
-      "type": "number",
-      "default": 1
-    },
     "slideDirection": {
       "type": "string",
       "default": "rightToLeft"
-    },
-    "infinityLoop": {
-      "type": "boolean",
-      "default": true
-    },
-    "logoView": {
-      "type": "string",
-      "default": "desktop"
-    },
-    "logoSpace": {
-      "type": "string",
-      "default": "desktop"
-    },
-    "mobileDevice": {
-      "type": "number",
-      "default": 2
-    },
-    "tabletDevice": {
-      "type": "number",
-      "default": 3
-    },
-    "desktopDevice": {
-      "type": "number",
-      "default": 4
-    },
-    "mobileSpace": {
-      "type": "number",
-      "default": 15
-    },
-    "tabletSpace": {
-      "type": "number",
-      "default": 25
-    },
-    "desktopSpace": {
-      "type": "number",
-      "default": 30
-    },
-    "navigation": {
-      "type": "boolean",
-      "default": true
-    },
-    "pagination": {
-      "type": "boolean",
-      "default": true
-    },
-    "dynamicPagination": {
-      "type": "boolean",
-      "default": false
-    },
-    "captionHover": {
-      "type": "string",
-      "default": "visible"
-    },
-    "captionVisibility": {
-      "type": "boolean",
-      "default": false
-    },
-    "captionTextColor": {
-      "type": "string",
-      "default": "#fff"
-    },
-    "captionBgColor": {
-      "type": "string",
-      "default": "#000"
-    },
-    "logoHoverStyle": {
-      "type": "string",
-      "default": "none"
-    },
-    "logoBorder": {
-      "type": "string",
-      "default": "0px"
-    },
-    "logoBorderColor": {
-      "type": "string",
-      "default": "#000"
-    },
-    "logoBorderRadius": {
-      "type": "number",
-      "default": 0
-    },
-    "borderStyle": {
-      "type": "string",
-      "default": "none"
     },
     "imageReplace": {
       "type": "any"

@@ -15,154 +15,132 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import '../../style.scss';
 const SecondSliderOption = ({ attributes, setAttributes }) => {
   const {
+    options,
+    caption,
     image,
-    autoplay,
-    speed,
-    autoplayDelay,
-    slideDirection,
-    infinityLoop,
-    desktopDevice,
-    tabletDevice,
-    mobileDevice,
-    desktopSpace,
-    tabletSpace,
-    mobileSpace,
-    navigation,
-    pagination,
-    dynamicPagination,
-    captionHover,
-    captionVisibility,
-    captionTextColor,
-    captionBgColor,
-    logoHoverStyle,
-    logoBorder,
-    logoBorderColor,
-    logoBorderRadius,
-    borderStyle,
+    sliderStyles,
     imageReplace,
     idx,
     orderIdx,
   } = attributes;
-return (
-  <div className="swiper-wrapper-main-slide">
-    <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      spaceBetween={50}
-      slidesPerView={3}
-      autoplay={
-        autoplay
-          ? {
-              delay: autoplayDelay * 1000,
-              reverseDirection: slideDirection === 'rightToLeft' ? false : true,
+  return (
+    <div className="swiper-wrapper-main-slide">
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={3}
+        autoplay={
+          options.autoplay
+            ? {
+              delay: options.delay * 1000,
+              reverseDirection: options.direction === 'rightToLeft' ? false : true,
             }
-          : false
-      }
-      navigation={navigation ? { clickable: true } : false}
-      draggable={false}
-      loop={infinityLoop}
-      speed={speed * 1000}
-      autoHeight={true}
-      pagination={
-        pagination
-          ? { clickable: true, dynamicBullets: dynamicPagination }
-          : false
-      }
-      breakpoints={{
-        0: {
-          slidesPerView: mobileDevice,
-          spaceBetween: mobileSpace,
-        },
-        768: {
-          slidesPerView: tabletDevice,
-          spaceBetween: tabletSpace,
-        },
-        1024: {
-          slidesPerView: desktopDevice,
-          spaceBetween: desktopSpace,
-        },
-      }}
-    >
-      {image &&
-        image.map((img, idx) => (
-          <>
-            <SwiperSlide>
-              <div
-                style={{
-                  border: `${orderIdx === idx ? '1px solid blue' : 'none'}`,
-                }}
-              >
+            : false
+        }
+        navigation={options.navigation ? { clickable: true } : false}
+        draggable={false}
+        loop={options.loop}
+        speed={options.speed * 1000}
+        autoHeight={true}
+        pagination={
+          options.pagination
+            ? { clickable: true, dynamicBullets: options.dynamicPagination }
+            : false
+        }
+        breakpoints={{
+          0: {
+            slidesPerView: options.logoView.mobile,
+            spaceBetween: options.space.mobile,
+          },
+          768: {
+            slidesPerView: options.logoView.tablet,
+            spaceBetween: options.space.tablet,
+          },
+          1024: {
+            slidesPerView: options.logoView.desktop,
+            spaceBetween: options.space.desktop,
+          },
+        }}
+      >
+        {image &&
+          image.map((img, idx) => (
+            <>
+              <SwiperSlide>
                 <div
-                  onClick={() => setAttributes({ orderIdx: idx })}
-                  className="slider-logo-wrapper"
                   style={{
-                    position: 'relative',
-                    border: `${logoBorder} ${borderStyle} ${logoBorderColor}`,
-                    borderRadius: logoBorderRadius,
+                    border: `${orderIdx === idx ? '1px solid blue' : 'none'}`,
                   }}
                 >
-                  <i
-                    onClick={() =>
-                      setAttributes({
-                        image: image.filter((val, i) => i !== idx),
-                      })
-                    }
-                    className="fa-solid fa-trash logo-slider-block-delete-btn"
-                  ></i>
                   <div
-                    onClick={() => setAttributes({ idx })}
-                    className="logo-replace-wrapper"
-                  >
-                    <i onClick={imageReplace} className="fa-solid fa-plus"></i>
-                  </div>
-                  <img
+                    onClick={() => setAttributes({ orderIdx: idx })}
+                    className="slider-logo-wrapper"
                     style={{
-                      width: '100%',
-                      height: 'auto',
-                      objectFit: 'contain',
-                    }}
-                    className={`${
-                      logoHoverStyle === 'gray' && 'logo-grayScale'
-                    } ${logoHoverStyle === 'zoomIn' && 'zoomIn'} ${
-                      logoHoverStyle === 'zoomOut' && 'zoomOut'
-                    } `}
-                    src={img?.url}
-                    alt={img?.alt}
-                  />
-                  <div
-                    className={`logo-slider-block-caption  ${
-                      captionHover === 'hover' && 'caption-hover'
-                    } ${!captionVisibility && 'hidden'}`}
-                    style={{
-                      position: 'absolute',
-                      bottom: '0px',
-                      left: '0',
-                      right: '0',
-                      color: captionTextColor,
-                      backgroundColor: captionBgColor,
+                      position: 'relative',
+                      border: `${sliderStyles.logo.border.width} ${sliderStyles.logo.border.style} ${sliderStyles.logo.border.color}`,
+                      borderRadius: sliderStyles.logo.border.radius,
                     }}
                   >
-                    <RichText
-                      style={{ color: captionTextColor }}
-                      tagName="span"
-                      value={img?.caption}
-                      allowedFormats={['core/bold', 'core/italic', 'core/link']}
-                      onChange={(value) =>
+                    <i
+                      onClick={() =>
                         setAttributes({
-                          image: image?.map((val, i) =>
-                            i === idx ? { ...val, caption: value } : val
-                          ),
+                          image: image.filter((val, i) => i !== idx),
                         })
                       }
+                      className="fa-solid fa-trash logo-slider-block-delete-btn"
+                    ></i>
+                    <div
+                      onClick={() => setAttributes({ idx })}
+                      className="logo-replace-wrapper"
+                    >
+                      <i onClick={imageReplace} className="fa-solid fa-plus"></i>
+                    </div>
+                    <img
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'contain',
+                      }}
+                      className={`${sliderStyles.logo.hover === 'gray' && 'logo-grayScale'
+                        } ${sliderStyles.logo.hover === 'zoomIn' && 'zoomIn'} ${sliderStyles.logo.hover === 'zoomOut' && 'zoomOut'
+                        } `}
+                      src={img?.url}
+                      alt={img?.alt}
                     />
+                    <div
+                      className={`logo-slider-block-caption  ${caption.hover === 'hover' && 'caption-hover'
+                        } ${!caption.isCaptionVisible && 'hidden'}`}
+                      style={{
+                        position: 'absolute',
+                        bottom: '0px',
+                        left: '0',
+                        right: '0',
+                        color: caption.color.text,
+                        backgroundColor: caption.color.bg,
+                      }}
+                    >
+                      <RichText
+                        style={{ color: caption.color.text }}
+                        tagName="span"
+                        value={img?.caption}
+                        placeholder='Write caption...'
+                        allowedFormats={['core/bold', 'core/italic', 'core/link']}
+                        onChange={(value) =>
+                          setAttributes({
+                            image: image?.map((val, i) =>
+                              i === idx ? { ...val, caption: value } : val
+                            ),
+                          })
+                        }
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          </>
-        ))}
-    </Swiper>
-  </div>
-);
+              </SwiperSlide>
+            </>
+          ))}
+      </Swiper>
+    </div>
+  );
 };
 export default SecondSliderOption;

@@ -11,7 +11,7 @@ html {
 }
 
 // Block Name
-.wp-block-bpsl-hello {
+.wp-block-b-blocks-logo-slider-block,.wp-block-bpsl-hello {
   * {
     box-sizing: border-box;
   }
@@ -22,6 +22,11 @@ html {
     display: inline-block;
   }
 
+}
+
+.components-text{
+  text-transform: initial !important;
+}
   .icon {
     font-style: inherit;
   }
@@ -155,4 +160,3 @@ html {
       transform: scaleX(1);
     }
   }
-}

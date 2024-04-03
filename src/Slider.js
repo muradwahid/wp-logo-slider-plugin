@@ -15,30 +15,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import './style.scss';
 const Slider = ({ attributes, setAttributes }) => {
   const {
+    options,
+    caption,
     image,
-    autoplay,
-    speed,
-    autoplayDelay,
-    slideDirection,
-    infinityLoop,
-    desktopDevice,
-    tabletDevice,
-    mobileDevice,
-    desktopSpace,
-    tabletSpace,
-    mobileSpace,
-    navigation,
-    pagination,
-    dynamicPagination,
-    captionHover,
-    captionVisibility,
-    captionTextColor,
-    captionBgColor,
-    logoHoverStyle,
-    logoBorder,
-    logoBorderColor,
-    logoBorderRadius,
-    borderStyle,
+    sliderStyles,
     imageReplace,
     idx,
     orderIdx,
@@ -51,36 +31,36 @@ const Slider = ({ attributes, setAttributes }) => {
         spaceBetween={50}
         slidesPerView={3}
         autoplay={
-          autoplay
+          options.autoplay
             ? {
-                delay: autoplayDelay * 1000,
-                reverseDirection:
-                  slideDirection === 'rightToLeft' ? false : true,
-              }
+              delay: options.delay * 1000,
+              reverseDirection:
+                options.direction === 'rightToLeft' ? false : true,
+            }
             : false
         }
-        navigation={navigation ? { clickable: true } : false}
+        navigation={options.navigation ? { clickable: true } : false}
         draggable={false}
-        loop={infinityLoop ? false : true}
-        speed={speed * 1000}
+        loop={options.loop ? false : true}
+        speed={options.speed * 1000}
         autoHeight={true}
         pagination={
-          pagination
-            ? { clickable: true, dynamicBullets: dynamicPagination }
+          options.pagination
+            ? { clickable: true, dynamicBullets: options.dynamicPagination }
             : false
         }
         breakpoints={{
           0: {
-            slidesPerView: mobileDevice,
-            spaceBetween: mobileSpace,
+            slidesPerView: options.logoView.mobile,
+            spaceBetween: options.space.mobile,
           },
           768: {
-            slidesPerView: tabletDevice,
-            spaceBetween: tabletSpace,
+            slidesPerView: options.logoView.tablet,
+            spaceBetween: options.space.tablet,
           },
           1024: {
-            slidesPerView: desktopDevice,
-            spaceBetween: desktopSpace,
+            slidesPerView: options.logoView.desktop,
+            spaceBetween: options.space.desktop,
           },
         }}
       >
@@ -90,9 +70,8 @@ const Slider = ({ attributes, setAttributes }) => {
               <SwiperSlide>
                 <div
                   style={{
-                    border: `${
-                      orderIdx === idx ? '2px solid #007CBA' : 'none'
-                    }`,
+                    border: `${orderIdx === idx ? '2px solid #007CBA' : 'none'
+                      }`,
                     borderRadius: `${orderIdx === idx ? '4px' : 'none'}`,
                   }}
                 >
@@ -101,8 +80,8 @@ const Slider = ({ attributes, setAttributes }) => {
                     className="slider-logo-wrapper"
                     style={{
                       position: 'relative',
-                      border: `${logoBorder} ${borderStyle} ${logoBorderColor}`,
-                      borderRadius: logoBorderRadius,
+                      border: `${sliderStyles.logo.border.width} ${sliderStyles.logo.border.style} ${sliderStyles.logo.border.color}`,
+                      borderRadius: sliderStyles.logo.border.radius,
                     }}
                   >
                     <i
@@ -128,29 +107,26 @@ const Slider = ({ attributes, setAttributes }) => {
                         height: 'auto',
                         objectFit: 'contain',
                       }}
-                      className={`${
-                        logoHoverStyle === 'gray' && 'logo-grayScale'
-                      } ${logoHoverStyle === 'zoomIn' && 'zoomIn'} ${
-                        logoHoverStyle === 'zoomOut' && 'zoomOut'
-                      } `}
+                      className={`${sliderStyles.logo.hover === 'gray' && 'logo-grayScale'
+                        } ${sliderStyles.logo.hover === 'zoomIn' && 'zoomIn'} ${sliderStyles.logo.hover === 'zoomOut' && 'zoomOut'
+                        } `}
                       src={img?.url}
                       alt={img?.alt}
                     />
                     <div
-                      className={`logo-slider-block-caption  ${
-                        captionHover === 'hover' && 'caption-hover'
-                      } ${!captionVisibility && 'hidden'}`}
+                      className={`logo-slider-block-caption  ${caption.hover === 'hover' && 'caption-hover'
+                        } ${!caption.isCaptionVisible && 'hidden'}`}
                       style={{
                         position: 'absolute',
                         bottom: '0px',
                         left: '0',
                         right: '0',
-                        color: captionTextColor,
-                        backgroundColor: captionBgColor,
+                        color: caption.color.text,
+                        backgroundColor: caption.color.bg,
                       }}
                     >
                       <RichText
-                        style={{ color: captionTextColor }}
+                        style={{ color: caption.color.text }}
                         tagName="span"
                         value={img?.caption}
                         allowedFormats={[

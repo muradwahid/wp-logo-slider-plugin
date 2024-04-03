@@ -18,6 +18,8 @@
   "author": "Wasek Billah",
   "license": "ISC",
   "dependencies": {
+    "bpl-gutenberg-panel": "^0.0.25",
+    "immer": "^10.0.4",
     "react-icons": "^4.11.0",
     "swiper": "^10.3.1"
   },

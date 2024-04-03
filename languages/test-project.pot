@@ -1,25 +1,25 @@
-# Copyright (C) 2023 bPlugins LLC
+# Copyright (C) 2024 bPlugins LLC
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Logo Slider 1.0.0\n"
+"Project-Id-Version: Logo Slider Block 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/logo slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-12-12T09:03:40+00:00\n"
+"POT-Creation-Date: 2024-04-03T11:41:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
-"X-Domain: logo-slider-block\n"
+"X-Domain: b-blocks\n"
 
 #. Plugin Name of the plugin
-msgid "Logo Slider"
+msgid "Logo Slider Block"
 msgstr ""
 
 #. Description of the plugin
-msgid "Description of the Logo Slider."
+msgid "Description of the Logo Slider Block."
 msgstr ""
 
 #. Author of the plugin
@@ -30,109 +30,124 @@ msgstr ""
 msgid "http://bplugins.com"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7163
+#: dist/editor.js:18
+#: dist/editor.js:13162
 msgid "Slider Settings"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7167
+#: dist/editor.js:18
+#: dist/editor.js:13166
 msgid "Enable Autoplay"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7172
+#: dist/editor.js:18
+#: dist/editor.js:13172
 msgid "Slide Direction"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7183
+#: dist/editor.js:18
+#: dist/editor.js:13185
 msgid "Slider Speed (Second)"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7191
+#: dist/editor.js:18
+#: dist/editor.js:13194
 msgid "Slider Delay Speed (Second)"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7199
+#: dist/editor.js:18
+#: dist/editor.js:13202
 msgid "Infinite Loop"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7269
+#: dist/editor.js:18
+#: dist/editor.js:13208
+msgid "Logos Per View"
+msgstr ""
+
+#: dist/editor.js:18
+#: dist/editor.js:13222
+msgid "Space Between"
+msgstr ""
+
+#: dist/editor.js:18
+#: dist/editor.js:13249
 msgid "Navigation"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7272
+#: dist/editor.js:18
+#: dist/editor.js:13252
 msgid "Show Navigation"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7283
+#: dist/editor.js:18
+#: dist/editor.js:13275
 msgid "Pagination"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7286
+#: dist/editor.js:18
+#: dist/editor.js:13278
 msgid "Show Pagination"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7299
+#: dist/editor.js:18
+#: dist/editor.js:13291
 msgid "Dynamic Pagination"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7308
+#: dist/editor.js:18
+#: dist/editor.js:13312
+#: dist/editor.js:13577
 msgid "Logo Caption"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7312
+#: dist/editor.js:18
+#: dist/editor.js:13316
 msgid "Show Logo Caption"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7321
+#: dist/editor.js:18
+#: dist/editor.js:13579
 msgid "Caption Visibility"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7331
-#: dist/editor.js:7344
+#: dist/editor.js:18
+#: dist/editor.js:13588
 msgid "Color"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7358
+#: dist/editor.js:18
+#: dist/editor.js:13590
+msgid "Background"
+msgstr ""
+
+#: dist/editor.js:18
+#: dist/editor.js:13608
 msgid "Logo Style"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7360
+#: dist/editor.js:18
+#: dist/editor.js:13610
 msgid "Logo Hover Style"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7371
+#: dist/editor.js:18
+#: dist/editor.js:13623
 msgid "Border Width"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7378
+#: dist/editor.js:18
+#: dist/editor.js:13634
 msgid "Border Style"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7390
+#: dist/editor.js:18
+#: dist/editor.js:13648
 msgid "Border Color"
 msgstr ""
 
-#: dist/editor.js:6
-#: dist/editor.js:7402
+#: dist/editor.js:18
+#: dist/editor.js:13651
 msgid "Border Radius"
 msgstr ""
 
@@ -143,20 +158,20 @@ msgstr ""
 
 #: inc/block.json
 msgctxt "block description"
-msgid "Description of Logo Slider."
+msgid "Logo sliders are often used on websites and blogs to showcase a company's clients, partners, or sponsors."
 msgstr ""
 
 #: inc/block.json
 msgctxt "block keyword"
-msgid "hello"
+msgid "slider"
 msgstr ""
 
 #: inc/block.json
 msgctxt "block keyword"
-msgid "block"
+msgid "logo"
 msgstr ""
 
 #: inc/block.json
 msgctxt "block keyword"
-msgid "gutenberg"
+msgid "carousel"
 msgstr ""
