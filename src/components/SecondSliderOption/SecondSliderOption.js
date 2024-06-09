@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import {useEffect} from "react";
 import { RichText } from '@wordpress/block-editor';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -23,6 +24,9 @@ const SecondSliderOption = ({ attributes, setAttributes }) => {
     idx,
     orderIdx,
   } = attributes;
+  useEffect(() => {
+    
+  }, [options.logoView])
   return (
     <div className="swiper-wrapper-main-slide">
       <Swiper
@@ -49,17 +53,17 @@ const SecondSliderOption = ({ attributes, setAttributes }) => {
             : false
         }
         breakpoints={{
-          0: {
-            slidesPerView: options.logoView.mobile,
-            spaceBetween: options.space.mobile,
-          },
-          768: {
-            slidesPerView: options.logoView.tablet,
-            spaceBetween: options.space.tablet,
-          },
           1024: {
             slidesPerView: options.logoView.desktop,
             spaceBetween: options.space.desktop,
+          },
+          640: {
+            slidesPerView: options.logoView.tablet,
+            spaceBetween: options.space.tablet,
+          },
+          0: {
+            slidesPerView: options.logoView.mobile,
+            spaceBetween: options.space.mobile,
           },
         }}
       >
@@ -70,6 +74,8 @@ const SecondSliderOption = ({ attributes, setAttributes }) => {
                 <div
                   style={{
                     border: `${orderIdx === idx ? '1px solid blue' : 'none'}`,
+                    height:sliderStyles.logo.height,
+                    width: sliderStyles.logo.height
                   }}
                 >
                   <div
@@ -97,19 +103,22 @@ const SecondSliderOption = ({ attributes, setAttributes }) => {
                     </div>
                     <img
                       style={{
-                        width: '100%',
-                        height: 'auto',
-                        objectFit: 'contain',
+                        // width: '100%',
+                        // height: '100%',
+                        // objectFit: 'contain',
+                        width: sliderStyles.logo.width,
+                        objectFit: sliderStyles.logo.logoFitOption,
+                        height: sliderStyles.logo.height,
                       }}
-                      className={`${sliderStyles.logo.hover === 'gray' && 'logo-grayScale'
-                        } ${sliderStyles.logo.hover === 'zoomIn' && 'zoomIn'} ${sliderStyles.logo.hover === 'zoomOut' && 'zoomOut'
+                      className={`${sliderStyles.logo.hover === 'gray' ? 'logo-grayScale':""
+                        } ${sliderStyles.logo.hover === 'zoomIn' ? 'zoomIn':""} ${sliderStyles.logo.hover === 'zoomOut' ? 'zoomOut':""
                         } `}
                       src={img?.url}
                       alt={img?.alt}
                     />
                     <div
-                      className={`logo-slider-block-caption  ${caption.hover === 'hover' && 'caption-hover'
-                        } ${!caption.isCaptionVisible && 'hidden'}`}
+                      className={`logo-slider-block-caption  ${caption.hover === 'hover' ? 'caption-hover':""
+                        } ${!caption.isCaptionVisible ? 'hidden':""}`}
                       style={{
                         position: 'absolute',
                         bottom: '0px',

@@ -4,12 +4,42 @@ import { PanelColorPicker } from 'bpl-gutenberg-panel';
 import React from 'react';
 import { updateData } from '../../../utils/functions';
 import LogoCaption from './LogoCaption';
+import { objectFitOptions } from '../../../utils/options';
 
 function StyleSettings({ attributes, setAttributes }) {
-  const { sliderStyles,caption } = attributes;
+  const { sliderStyles, caption } = attributes;
   return (
     <>
-    <PanelBody title={__('Logo Style', 'b-blocks')} initialOpen={true}>
+      <PanelBody title={__('Logo Style', 'b-blocks')} initialOpen={true}>
+        <Flex style={{ marginBottom: '15px' }}>
+          <label>{__('Height', 'b-blocks')}</label>
+          <UnitControl
+            style={{ width: "92px" }}
+            value={sliderStyles.logo.height}
+            onChange={(value) => setAttributes({ sliderStyles: updateData(sliderStyles, value, "logo", "height") })}
+            max={sliderStyles.logo.height.includes("%")? 100 : 1000}
+            min={0}
+          />
+        </Flex>
+        <Flex style={{ marginBottom: '15px' }}>
+          <label>{__('Width', 'b-blocks')}</label>
+          <UnitControl
+            style={{ width: "92px" }}
+            value={sliderStyles.logo.width}
+            onChange={(value) => setAttributes({ sliderStyles: updateData(sliderStyles, value, "logo", "width") })}
+            max={sliderStyles.logo.width.includes("%") ? 100 : 1000}
+            min={0}
+          />
+        </Flex>
+
+      <Flex>
+        <label style={{ marginBottom: "12px" }}>{__('Logo Fit Options', 'b-blocks')}</label>
+        <SelectControl
+            value={sliderStyles.logo.logoFitOption}
+          options={objectFitOptions}
+            onChange={(value) => setAttributes({ sliderStyles: updateData(sliderStyles, value, "logo", "logoFitOption") })}
+        />
+      </Flex>
       <Flex>
         <label style={{ marginBottom: "12px" }}>{__('Logo Hover Style', 'b-blocks')}</label>
         <SelectControl
@@ -23,6 +53,7 @@ function StyleSettings({ attributes, setAttributes }) {
           onChange={(value) => setAttributes({ sliderStyles: updateData(sliderStyles, value, "logo", "hover") })}
         />
       </Flex>
+      
       <Flex style={{marginBottom:'15px'}}>
         <label>{__('Border Width', 'b-blocks')}</label>
         <UnitControl
